@@ -1,4 +1,4 @@
- " auto-install vim-plug
+" auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -23,15 +23,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Base16 lightline
     Plug 'daviesjamie/vim-base16-lightline'
+    
+    " Gruvbox lightline
+    Plug 'shinchu/lightline-gruvbox.vim'	
 
     " Lightline statusbar
     Plug 'itchyny/lightline.vim'
+
 
     " Goyo clean writing environment
     Plug 'junegunn/goyo.vim'    
     
     " Markdown preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+    " Hex color highlighting
+    " Requires golang installed and other fancy stuff
+    " https://github.com/RRethy/vim-hexokinase
+    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 call plug#end()
 
@@ -50,8 +59,6 @@ nmap <C-n> :NERDTreeToggle<CR>
 " Nerd Tree remove help header
 let NERDTreeMinimalUI=1
 
-" Customizes look of nerd tree. Green directories
-:hi Directory guifg=#FF0000 ctermfg=green
 " No trailing slashes
 augroup nerdtreehidetirslashes
 	autocmd!
@@ -62,21 +69,24 @@ let g:NERDTreeDirArrowExpandable = '❯'
 let g:NERDTreeDirArrowCollapsible = '⬧'
 
 
-
-" Base16 lightline config
-let g:lightline = {
-\   'colorscheme': 'base16'
-\ }
-
 " customise lightline statusbar
-set laststatus=2
+set noshowmode
 set cmdheight=1
 let g:lightline = {
-      \ 'colorscheme': 'base16',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ] ]
       \ },
       \ }
+
+
+" Base16 color theme
+colorscheme base16-gruvbox-dark-medium
+
+
+" Hexokinase settings
+let g:Hexokinase_highlighters = ['virtual']
+
 
 
