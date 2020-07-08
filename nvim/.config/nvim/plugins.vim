@@ -45,11 +45,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 call plug#end()
+    
 
 " Nerdtree config
 
 " NERDTree on ctrl+n
-" let NERDTreeShowHidden=1
+let NERDTreeShowHidden=1
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 " close Nerd Tree after a file is opened
