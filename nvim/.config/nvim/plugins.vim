@@ -27,6 +27,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Lightline statusbar
     Plug 'itchyny/lightline.vim'
 
+    " Goyo clean writing environment
+    Plug 'junegunn/goyo.vim'    
+    
+    " Markdown preview
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 
