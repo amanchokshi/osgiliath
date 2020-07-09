@@ -109,13 +109,13 @@ ZSH_HIGHLIGHT_STYLES[pathi_prefix]=none
 
 
 SPACESHIP_PROMPT_ORDER=(
+  venv          # virtualenv section
   pyenv         # Pyenv section
+  conda         # conda virtualenv section
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
-  venv          # virtualenv section
-  conda         # conda virtualenv section
   exec_time     # Execution time
   line_sep      # Line break
   vi_mode       # Vi-mode indicator
