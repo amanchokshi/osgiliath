@@ -69,5 +69,8 @@ set timeoutlen=1000 ttimeoutlen=0
 
 
 " Python support for virtual envs
-let g:python3_host_prog = expand("~/.pyenv/shims/python")
+" Tells nvim which python version to use
+" Install all nvim python packages in pyenv 'tools'
+let g:python3_host_prog = expand("~/.pyenv/versions/tools/bin/python")
+let g:python_host_prog = expand("~/.pyenv/versions/py27/bin/python")
 
