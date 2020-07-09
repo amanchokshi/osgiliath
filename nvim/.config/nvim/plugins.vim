@@ -90,4 +90,3 @@ colorscheme base16-gruvbox-dark-medium
 
 " Hexokinase settings
 let g:Hexokinase_highlighters = ['virtual']
-
