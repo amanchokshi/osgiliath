@@ -41,6 +41,7 @@ Virtual environments can be tough on python plugins. I create a `pyenv` virtuale
  - black
  - flake8
  - isort
+ - pydocstyle
  - shellcheck
 
 
@@ -65,6 +66,7 @@ Then, I link each python package in `tools` to `~/.nvim/bin` using symlinks
 ln -s `pyenv which flake8` ~/.nvim/bin/flake8
 ln -s `pyenv which black` ~/.nvim/bin/black
 ln -s `pyenv which isort` ~/.nvim/bin/isort
+ln -s `pyenv which pydocstyle` ~/.nvim/bin/pydocstyle
 ln -s `which shellcheck` ~/.nvim/bin/shellcheck
 ```
 

@@ -93,7 +93,7 @@ let g:Hexokinase_highlighters = ['virtual']
 
 " Ale Language support
 let g:ale_linters = {
-    \'python': ['flake8'],
+    \'python': ['flake8', 'pydocstyle'],
     \'sh': ['shellcheck']
 \}
 
