@@ -10,32 +10,32 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    
+
     " File Explorer
     Plug 'scrooloose/NERDTree'
-    
+
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-	
+
     " Start screen for vim
     Plug 'mhinz/vim-startify'
-	
+
     " Base16 colors for vim
     Plug 'chriskempson/base16-vim'
 
     " Base16 lightline
     Plug 'daviesjamie/vim-base16-lightline'
-    
+
     " Gruvbox lightline
-    Plug 'shinchu/lightline-gruvbox.vim'	
+    Plug 'shinchu/lightline-gruvbox.vim'
 
     " Lightline statusbar
     Plug 'itchyny/lightline.vim'
 
 
     " Goyo clean writing environment
-    Plug 'junegunn/goyo.vim'    
-    
+    Plug 'junegunn/goyo.vim'
+
     " Markdown preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -44,8 +44,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " https://github.com/RRethy/vim-hexokinase
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
+    " Asynchronous lint engine
+    Plug 'dense-analysis/ale'
+
 call plug#end()
-    
+
 
 " Nerdtree config
 
@@ -71,22 +74,38 @@ augroup end
 let g:NERDTreeDirArrowExpandable = '❯'
 let g:NERDTreeDirArrowCollapsible = '⬧'
 
-
 " customise lightline statusbar
 set noshowmode
 set cmdheight=1
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ 'active': {
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ] ]
-      \ },
-      \ }
-
+    \ 'colorscheme': 'gruvbox',
+    \ 'active': {
+    \   'right': [ [ 'lineinfo' ],
+    \              [ 'percent' ] ]
+    \ },
+\ }
 
 " Base16 color theme
 colorscheme base16-gruvbox-dark-medium
 
-
 " Hexokinase settings
 let g:Hexokinase_highlighters = ['virtual']
+
+" Ale Language support
+let g:ale_linters = {
+    \'python': ['flake8'],
+    \'sh': ['shellcheck']
+\}
+
+let g:ale_fixers = {
+    \'*': ['remove_trailing_lines', 'trim_whitespace'],
+    \'python': ['black', 'isort']
+\}
+
+" Fix file on save
+let g:ale_fix_on_save = 1
+
+" Linter symbol
+let g:ale_sign_error = '⏣'
+let g:ale_sign_warning = '⏣'
+

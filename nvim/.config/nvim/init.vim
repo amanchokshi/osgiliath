@@ -2,7 +2,7 @@
 source $HOME/.config/nvim/plugins.vim
 
 " Access colors present in 256 colorspace
-let base16colorspace=256  
+let base16colorspace=256
 set termguicolors
 
 " Syntax highlighting
@@ -13,14 +13,14 @@ set noerrorbells
 
 " Indent magic
 " Always 4 charachters
+" Convert tabs to spaces
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-" Convert tabs to spaces
 set expandtab
 set smartindent
 
 " highlight matching parentheses / brackets [{()}]
-set showmatch           
+set showmatch
 
 " Line numbers
 set number
@@ -41,8 +41,8 @@ set undofile
 " Incremental search
 set incsearch
 
-" Set 80 char column
-set colorcolumn=80
+" Set 120 char column
+set colorcolumn=120
 highlight ColorColumn ctermbg=0 guibg=#3c3836
 
 " removes end of buffer ~ signs
@@ -52,10 +52,10 @@ hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set nocompatible
 
 " Encoding to UTF-8
-set encoding=utf8       
+set encoding=utf8
 
 " Enable mouse support
-set mouse=a             
+set mouse=a
 
 " Faster rendering
 set lazyredraw
@@ -74,3 +74,10 @@ set timeoutlen=1000 ttimeoutlen=0
 let g:python3_host_prog = expand("~/.pyenv/versions/tools/bin/python")
 let g:python_host_prog = expand("~/.pyenv/versions/py27/bin/python")
 
+" Magic to make ALE linter gutter highlighting work
+" https://github.com/dense-analysis/ale/issues/249
+autocmd VimEnter * :let g:ale_change_sign_column_color = 1
+autocmd VimEnter * :highlight! ALESignColumnWithErrors ctermfg=0 ctermbg=8 guifg=#A5A5A5 guibg=#3c3836
+autocmd VimEnter * :highlight! ALESignColumnWithoutErrors ctermfg=0 ctermbg=8 guifg=#A5A5A5 guibg=#3c3836
+autocmd VimEnter * :highlight! ALEErrorSign ctermfg=9 ctermbg=8 guifg=#fb4934 guibg=#3c3836
+autocmd VimEnter * :highlight! ALEWarningSign ctermfg=11 ctermbg=8 guifg=#fe8019 guibg=#3c3836
