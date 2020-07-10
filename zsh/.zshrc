@@ -242,5 +242,7 @@ if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
   source "${VIRTUAL_ENV}/bin/activate"
 fi
 
+# dir on path where linting python packages are symlinked
+# Makes vim ALE work in all venvs
 export PATH="$HOME/.nvim/bin:$PATH"
 
