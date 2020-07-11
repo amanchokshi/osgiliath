@@ -246,3 +246,6 @@ fi
 # Makes vim ALE work in all venvs
 export PATH="$HOME/.nvim/bin:$PATH"
 
+# Alacritty shell completions
+# https://github.com/alacritty/alacritty/blob/master/INSTALL.md
+fpath+=${ZDOTDIR:-~}/.zsh_functions
