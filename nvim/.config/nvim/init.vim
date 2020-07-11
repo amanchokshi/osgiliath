@@ -42,11 +42,14 @@ set undofile
 set incsearch
 
 " Set 120 char column
-set colorcolumn=120
 highlight ColorColumn ctermbg=0 guibg=#3c3836
 
 " removes end of buffer ~ signs
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+
+" Transparency in nvim
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 " No backward compatibility with Vi
 set nocompatible
