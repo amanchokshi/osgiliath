@@ -8,8 +8,8 @@ window:
 
   # Window padding (changes require restart)
   padding:
-    x: 10
-    y: 10
+    x: 7
+    y: 7
 
   # Window decorations
   # Values for `decorations`:
