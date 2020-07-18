@@ -8,3 +8,6 @@ stow -v -R -t ~ nvim
 
 echo 'Stowing alacritty config to "$HOME"'
 stow -v -R -t ~ alacritty
+
+echo 'Stowing tmux config to "$HOME"'
+stow -v -R -t ~ tmux
