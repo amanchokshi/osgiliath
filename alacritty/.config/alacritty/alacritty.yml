@@ -42,7 +42,7 @@ font:
     family: Hack
     style: Italic
 
-  size: 14.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -98,7 +98,7 @@ colors:
 
 
 # Background opacity
-background_opacity: 0.95
+background_opacity: 0.98
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

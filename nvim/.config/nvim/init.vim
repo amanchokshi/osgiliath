@@ -23,7 +23,7 @@ set smartindent
 set showmatch
 
 " Line numbers
-set number
+set number relativenumber
 
 " Don't warp lines, keeep going
 set nowrap
@@ -48,7 +48,7 @@ highlight ColorColumn ctermbg=0 guibg=#3c3836
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 
 " Transparency in nvim
-hi! Normal ctermbg=NONE guibg=NONE 
+hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 " No backward compatibility with Vi
@@ -70,7 +70,6 @@ set wildmenu
 " esc key works immediately
 set timeoutlen=1000 ttimeoutlen=0
 
-
 " Python support for virtual envs
 " Tells nvim which python version to use
 " Install all nvim python packages in pyenv 'tools'
@@ -84,3 +83,8 @@ autocmd VimEnter * :highlight! ALESignColumnWithErrors ctermfg=0 ctermbg=8 guifg
 autocmd VimEnter * :highlight! ALESignColumnWithoutErrors ctermfg=0 ctermbg=8 guifg=#A5A5A5 guibg=#3c3836
 autocmd VimEnter * :highlight! ALEErrorSign ctermfg=9 ctermbg=8 guifg=#fb4934 guibg=#3c3836
 autocmd VimEnter * :highlight! ALEWarningSign ctermfg=11 ctermbg=8 guifg=#fe8019 guibg=#3c3836
+
+" Key mappings
+" Leader key
+let mapleader = ","
+

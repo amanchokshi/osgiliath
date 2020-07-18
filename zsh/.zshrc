@@ -194,7 +194,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# TMUX bew stuff
+# TMUX brew stuff
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
@@ -224,6 +224,9 @@ alias v=nvim
 # Python aliases
 alias p=python
 alias ip=ipython
+
+# gotop
+alias gtop=gotop
 
 # Pyenv is the master of python paths
 export PYENV_ROOT="$HOME/.pyenv"
