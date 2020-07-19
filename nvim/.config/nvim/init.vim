@@ -1,5 +1,5 @@
 " Source plugin files
-source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/vim-plug/plugins.vim
 
 " Access colors present in 256 colorspace
 let base16colorspace=256
