@@ -49,13 +49,6 @@ hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 let g:python3_host_prog = expand("~/.pyenv/versions/tools/bin/python")
 let g:python_host_prog = expand("~/.pyenv/versions/py27/bin/python")
 
-" Magic to make ALE linter gutter highlighting work
-" https://github.com/dense-analysis/ale/issues/249
-autocmd VimEnter * :let g:ale_change_sign_column_color = 1
-autocmd VimEnter * :highlight! ALESignColumnWithErrors ctermfg=0 ctermbg=8 guifg=#A5A5A5 guibg=#3c3836
-autocmd VimEnter * :highlight! ALESignColumnWithoutErrors ctermfg=0 ctermbg=8 guifg=#A5A5A5 guibg=#3c3836
-autocmd VimEnter * :highlight! ALEErrorSign ctermfg=9 ctermbg=8 guifg=#fb4934 guibg=#3c3836
-autocmd VimEnter * :highlight! ALEWarningSign ctermfg=11 ctermbg=8 guifg=#fe8019 guibg=#3c3836
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
