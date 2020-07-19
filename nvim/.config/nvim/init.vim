@@ -9,9 +9,5 @@ source $HOME/.config/nvim/vim-plug/colorscheme.vim          " Colorscheme settin
 source $HOME/.config/nvim/vim-plug/nerd-commenter.vim       " Nerd commenter settings
 source $HOME/.config/nvim/vim-plug/goyo-limelight.vim       " Goyo and Limelight settings
 
-
 source $HOME/.config/nvim/general/settings.vim              " General settings
-
-
-
 

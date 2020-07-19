@@ -7,6 +7,7 @@ set iskeyword+=-                      	" treat dash separated words as a word te
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
+set pumheight=10                        " Makes popup menu smaller
 set t_Co=256                            " Support 256 colors
 set termguicolors                       " Support 265 colors
 set noerrorbells                        " No error bells of any kind 
