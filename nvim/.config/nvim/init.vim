@@ -41,9 +41,6 @@ set undofile
 " Incremental search
 set incsearch
 
-" Set 120 char column
-highlight ColorColumn ctermbg=0 guibg=#3c3836
-
 " removes end of buffer ~ signs
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 

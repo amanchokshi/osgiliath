@@ -212,6 +212,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+
 # Disable pyenv virtuelenv prompt
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
@@ -252,3 +253,14 @@ export PATH="$HOME/.nvim/bin:$PATH"
 # Alacritty shell completions
 # https://github.com/alacritty/alacritty/blob/master/INSTALL.md
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+# Node brew stuff
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

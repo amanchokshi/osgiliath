@@ -1,6 +1,6 @@
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   " autocmd VimEnter * PlugInstall
   " autocmd VimEnter * PlugInstall | source $MYVIMRC
@@ -11,8 +11,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
 
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
+    " File Explorer & code commented
+    Plug 'preservim/nerdtree'
+    Plug 'preservim/nerdcommenter'
 
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
@@ -44,20 +45,28 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Asynchronous lint engine
     Plug 'dense-analysis/ale'
 
+    " Conquer of Completion
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 
-" Nerdtree config
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
 
-" NERDTree on ctrl+n
-let NERDTreeShowHidden=1
-map <silent> <C-n> :NERDTreeToggle<CR>
+
+" Nerdtree config
 
 " close Nerd Tree after a file is opened
 let g:NERDTreeQuitOnOpen=1
 
 " Nerd Tree keybinding: ctrl-n to toggel nerdtree
+let NERDTreeShowHidden=1
 nmap <C-n> :NERDTreeToggle<CR>
+map <silent> <C-n> :NERDTreeToggle<CR>
 
 " Nerd Tree remove help header
 let NERDTreeMinimalUI=1
@@ -70,6 +79,19 @@ augroup end
 
 let g:NERDTreeDirArrowExpandable = '❯'
 let g:NERDTreeDirArrowCollapsible = '⬧'
+
+" Nerd Commenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+
+nmap <C-c>   <Plug>NERDCommenterToggle
+vmap <C-c>   <Plug>NERDCommenterToggle<CR>gv
 
 " customise lightline statusbar
 set noshowmode
@@ -130,6 +152,5 @@ function! s:goyo_leave()
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave() 
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 let g:goyo_width = 90
-
