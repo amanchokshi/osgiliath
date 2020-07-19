@@ -1,5 +1,6 @@
 " Source distributed config files
 source $HOME/.config/nvim/vim-plug/plugins.vim              " Plugins
+source $HOME/.config/nvim/vim-plug/coc.vim                  " CoC settings
 source $HOME/.config/nvim/vim-plug/ale.vim                  " ALE settings
 source $HOME/.config/nvim/vim-plug/lightline.vim            " Lightline settings
 source $HOME/.config/nvim/vim-plug/nerd-tree.vim            " Nerd tree settings

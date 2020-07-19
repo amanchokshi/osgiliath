@@ -45,7 +45,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Asynchronous lint engine
     Plug 'dense-analysis/ale'
 
-    " Conquer of Completion
+    " Conquer of Completion Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
@@ -56,9 +56,3 @@ autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
   \| endif
-
-
-
-
-
-
