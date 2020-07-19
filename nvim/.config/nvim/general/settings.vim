@@ -10,7 +10,8 @@ set splitright                          " Vertical splits will automatically be 
 set pumheight=10                        " Makes popup menu smaller
 set t_Co=256                            " Support 256 colors
 set termguicolors                       " Support 265 colors
-set noerrorbells                        " No error bells of any kind 
+set background=dark                     " Dark background
+set noerrorbells                        " No error bells of any kind
 set tabstop=4 softtabstop=4             " Insert 4 spaces for a tab
 set shiftwidth=4                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
@@ -35,14 +36,15 @@ set ttyfast                             " Faster rendering
 set encoding=utf8                       " Encoding set to utf8
 set nocompatible                        " No backward compatibility with Vi
 
-
 " removes end of buffer ~ signs
-hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+highlight EndOfBuffer guifg=#303030
 
 " Transparency in nvim
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
+" Remove highlight of current line number
+highlight CursorLineNr guibg=#282828AF guifg=#d65d0e
 
 " Python support for virtual envs
 " Tells nvim which python version to use
@@ -50,6 +52,4 @@ hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 let g:python3_host_prog = expand("~/.pyenv/versions/tools/bin/python")
 let g:python_host_prog = expand("~/.pyenv/versions/py27/bin/python")
 
-
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-
