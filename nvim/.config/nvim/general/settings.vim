@@ -46,6 +46,9 @@ hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 " Remove highlight of current line number
 highlight CursorLineNr guibg=#282828AF guifg=#d65d0e
 
+" Remove linting gutter higlight
+highlight SignColumn guibg=282828AF
+
 " Python support for virtual envs
 " Tells nvim which python version to use
 " Install all nvim python packages in pyenv 'tools'
