@@ -1,6 +1,7 @@
 # osgiliath
-The Citadel of Stars - dotfiles
+Dotfiles - The Citadel of Stars
 
+![osgiliath](banner.jpg)
 
 ### Installation
 GNU `stow` is uses symlinks to place these dotfiles in the appropriate directories
@@ -15,8 +16,9 @@ sudo apt install stow
 Next clone this repository into your `$HOME`
 
 ```
-https://github.com/amanchokshi/osgiliath.git
-cd osgiliath
+mkdir ~/.osgiliath
+cd ~/.osgiliath
+https://github.com/amanchokshi/osgiliath.git .
 ```
 
 Install the dotfiles with
@@ -35,14 +37,16 @@ nvim
 
 ### Notes
 
-Virtual environments can be tough on python plugins. I create a `pyenv` virtualenv called `tools` where I install 
+Virtual environments can be tough on python plugins. I create a `pyenv` virtualenv called `tools` where I install
 
- - pynvim
- - black
- - flake8
- - isort
- - pydocstyle
- - shellcheck
+```
+pip install pynvim
+pip install black
+pip install flake8
+pip install isort
+pip install pydocstyle
+pip install shellcheck
+```
 
 
 In my `init.vim` I tell `nvim` to uses the `tools` virtualenv as its python version
@@ -51,8 +55,8 @@ In my `init.vim` I tell `nvim` to uses the `tools` virtualenv as its python vers
 let g:python3_host_prog = expand("~/.pyenv/versions/tools/bin/python")
 ```
 
-This works in ensuring that `nvim` can always find `pynvim` even in a virtualenv. Doing the same for other python 
-is more complex. 
+This works in ensuring that `nvim` can always find `pynvim` even in a virtualenv. Doing the same for other python
+is more complex.
 
 First, I create a directory `~/.nvim/bin` and add it to my path
 
@@ -71,4 +75,3 @@ ln -s `which shellcheck` ~/.nvim/bin/shellcheck
 ```
 
 This adds the packages to my `PATH`, and somehow makes linting work in all virtualenvs
-
