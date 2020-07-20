@@ -1,6 +1,6 @@
 " Ale Language support
 let g:ale_linters = {
-    \'python': ['black'],
+    \'python': ['flake8'],
     \'sh': ['shellcheck']
 \}
 
