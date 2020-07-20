@@ -151,9 +151,9 @@ SPACESHIP_DIR_COLOR=red
 SPACESHIP_GIT_PREFIX="» "
 SPACESHIP_GIT_SYMBOL=""
 SPACESHIP_GIT_BRANCH_PREFIX=""
-SPACESHIP_GIT_BRANCH_COLOR=blue
+SPACESHIP_GIT_BRANCH_COLOR=202
 SPACESHIP_GIT_STATUS_PREFIX="["
-SPACESHIP_GIT_STATUS_COLOR=blue
+SPACESHIP_GIT_STATUS_COLOR=202
 SPACESHIP_GIT_STATUS_DELETED="x"
 
 # vi-mode
@@ -170,7 +170,7 @@ SPACESHIP_PYENV_SHOW=true
 SPACESHIP_PYENV_PREFIX=""
 SPACESHIP_PYENV_SUFFIX=" » "
 SPACESHIP_PYENV_SYMBOL="༄ "
-SPACESHIP_PYENV_COLOR=cyan
+SPACESHIP_PYENV_COLOR=blue
 
 # Execution time
 SPACESHIP_EXEC_TIME_PREFIX=""
@@ -235,10 +235,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-# iterm shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh"
-source "${HOME}/.iterm2_shell_integration.zsh" || true
 
 # Vim with virtual envs
 # https://vi.stackexchange.com/questions/7644/use-vim-with-virtualenv/7654#7654
