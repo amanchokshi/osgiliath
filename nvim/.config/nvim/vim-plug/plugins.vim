@@ -51,6 +51,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Smart line numbers
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
+    " Latex for vim
+    Plug 'lervag/vimtex', { 'for': 'tex' }
+
 call plug#end()
 
 
