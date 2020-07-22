@@ -48,6 +48,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Conquer of Completion Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    " Smart line numbers
+    Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 call plug#end()
 
 
