@@ -1,7 +1,10 @@
 # osgiliath
 Dotfiles - The Citadel of Stars
 
+------------------------
 ![osgiliath](banner.jpg)
+
+------------------------
 
 ### Installation
 GNU `stow` is uses symlinks to place these dotfiles in the appropriate directories
