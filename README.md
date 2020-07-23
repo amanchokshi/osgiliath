@@ -13,7 +13,6 @@ First install `stow`
 
 ```
 brew install stow
-sudo apt install stow
 ```
 
 Next clone this repository into your `$HOME`
