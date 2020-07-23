@@ -2,7 +2,7 @@
 Dotfiles - The Citadel of Stars
 
 ------------------------
-![osgiliath](banner.jpg)
+![osgiliath](docs/banner.jpg)
 
 ------------------------
 
@@ -36,6 +36,8 @@ Install `neovim` plugings by opening nvim and running the command `:PlugInstall`
 nvim
 :PlugInstall
 ```
+
+![plug-install](docs/plug-install.png)
 
 ### Notes
 
