@@ -77,3 +77,26 @@ ln -s `which shellcheck` ~/.nvim/bin/shellcheck
 ```
 
 This adds the packages to my `PATH`, and somehow makes linting work in all virtualenvs
+
+#### SSHFS for MacOS
+
+It is incredibly useful to be able to browse remote files in the finder. This can be done using the `SSHFS` program.
+
+```
+brew cask install osxfuse
+brew install sshfs
+```
+
+Check out this [article](https://medium.com/@tzhenghao/writing-remote-code-on-a-mac-with-sshfs-c62d64bf9ef9) for 
+more details on setting up `SSHFS` on MacOS.
+
+To mount `Ucalegon` & `Ozstar` make the following directories and then use the `aliases` provided in my `.zshrc`
+
+```
+mkdir ~/Ucalegon
+mkdir ~/Ozstar
+
+# To mount the remote directories
+ucalegon_sshfs
+ozstar_sshfs
+```
