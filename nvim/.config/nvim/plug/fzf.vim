@@ -10,7 +10,8 @@ nnoremap <leader>f: :Commands<CR>
 nnoremap <leader>fw :Windows<CR>
 nnoremap <leader>fs :Snippets<CR>
 nnoremap <leader>f? :Helptags<CR>
-nnoremap <leader>fg :GitFiles?<CR>
+nnoremap <leader>fg :GitFiles<CR>
+nnoremap <leader>fgs :GitFiles?<CR>
 nnoremap <leader>fl :Lines<CR>
 nnoremap <leader>fL :BLines<CR>
 nnoremap <leader>ft :Tags<CR>
