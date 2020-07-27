@@ -57,6 +57,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Fuzzy finder
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    
+    " Floating terminal window
+    Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
