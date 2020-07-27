@@ -35,8 +35,12 @@ set lazyredraw                          " Faster rendering
 set ttyfast                             " Faster rendering
 set encoding=utf8                       " Encoding set to utf8
 set nocompatible                        " No backward compatibility with Vi
+set colorcolumn=160                     " Highlight line 160 - flake8 setting
 
-" removes end of buffer ~ signs
+" Color colum settings
+highlight ColorColumn ctermbg=0 guibg=#3c3836
+
+" Removes end of buffer ~ signs
 highlight EndOfBuffer guifg=#303030
 
 " Transparency in nvim
