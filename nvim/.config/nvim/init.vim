@@ -1,3 +1,6 @@
+" set leader key
+let mapleader = "\<Space>"
+
 " Source distributed config files
 source $HOME/.config/nvim/plug/plugins.vim                  " Plugins
 source $HOME/.config/nvim/plug/coc.vim                      " CoC settings
@@ -12,4 +15,3 @@ source $HOME/.config/nvim/plug/goyo-limelight.vim           " Goyo and Limelight
 source $HOME/.config/nvim/plug/fzf.vim                      " Fuzzy finder settings
 
 source $HOME/.config/nvim/settings.vim                      " General settings
-
