@@ -54,6 +54,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Latex for vim
     Plug 'lervag/vimtex', { 'for': 'tex' }
 
+    " Fuzzy finder
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 

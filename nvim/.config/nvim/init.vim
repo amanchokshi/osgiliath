@@ -9,6 +9,7 @@ source $HOME/.config/nvim/plug/hexokinase.vim               " Hexokinase setting
 source $HOME/.config/nvim/plug/colorscheme.vim              " Colorscheme settings
 source $HOME/.config/nvim/plug/nerd-commenter.vim           " Nerd commenter settings
 source $HOME/.config/nvim/plug/goyo-limelight.vim           " Goyo and Limelight settings
+source $HOME/.config/nvim/plug/fzf.vim                      " Fuzzy finder settings
 
 source $HOME/.config/nvim/settings.vim                      " General settings
 
