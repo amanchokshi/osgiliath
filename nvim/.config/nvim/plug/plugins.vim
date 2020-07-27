@@ -58,7 +58,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     
-    " Floating terminal window
+    " Float baby float
     Plug 'voldikss/vim-floaterm'
 
 call plug#end()
