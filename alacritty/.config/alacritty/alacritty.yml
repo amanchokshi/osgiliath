@@ -98,7 +98,7 @@ colors:
 
 
 # Background opacity
-background_opacity: 0.98
+background_opacity: 0.99
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
