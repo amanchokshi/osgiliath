@@ -264,3 +264,6 @@ export NVM_DIR="$HOME/.nvm"
 # sshfs mount
 alias ozstar_sshfs="sshfs -o volname=Ozstar ozstar:/fred/oz048/achokshi ~/Ozstar/"
 alias ucalegon_sshfs="sshfs -o volname=Ucalegon ucalegon:/media/achokshi/satellites/ ~/Ucalegon/"
+
+# bat theme
+export BAT_THEME="gruvbox"
