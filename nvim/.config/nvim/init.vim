@@ -1,6 +1,5 @@
 " set leader key
-" let mapleader = "\<Space>"
-let mapleader = "\\"
+let mapleader = "\<Space>"
 
 " Source distributed config files
 source $HOME/.config/nvim/plug/plugins.vim                  " Plugins

@@ -25,7 +25,7 @@ set nowritebackup                       " This is recommended by coc
 set undodir=~/.config/nvim/undodir      " Undo saved to custom undodir
 set undofile                            " Got to manually create the dir initially
 set updatetime=300                      " Faster completion
-set timeoutlen=700                      " By default timeoutlen is 1000 ms
+" set timeoutlen=700                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set wildmenu                            " Visual autocomplete for command menu
 set lazyredraw                          " Faster rendering
