@@ -224,6 +224,7 @@ alias v=nvim
 
 # Python aliases
 alias p=python
+alias bp=bpython
 alias ip=ipython
 
 # gotop
@@ -262,8 +263,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # sshfs mount
-alias ozstar_sshfs="sshfs -o default_permissions volname=Ozstar ozstar:/fred/oz048/achokshi ~/Ozstar/"
-alias ucalegon_sshfs="sshfs -o default_permissions volname=Ucalegon ucalegon:/media/achokshi/satellites/ ~/Ucalegon/"
+alias ozstar_sshfs="sshfs -o volname=Ozstar ozstar:/fred/oz048/achokshi ~/Ozstar/"
+alias ucalegon_sshfs="sshfs -o volname=Ucalegon ucalegon:/media/achokshi/satellites/ ~/Ucalegon/"
+
+# ds9
+alias ds9="open /Applications/SAOImageDS9.app"
+alias fv="open /Applications/FV.app"
 
 # bat theme
 export BAT_THEME="gruvbox"
