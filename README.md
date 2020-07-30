@@ -74,6 +74,7 @@ ln -s `pyenv which flake8` ~/.nvim/bin/flake8
 ln -s `pyenv which black` ~/.nvim/bin/black
 ln -s `pyenv which isort` ~/.nvim/bin/isort
 ln -s `which shellcheck` ~/.nvim/bin/shellcheck
+ln -s `pyenv which instantrst` ~/.nvim/bin/instantrst
 ```
 
 This adds the packages to my `PATH`, and somehow makes linting work in all virtualenvs
