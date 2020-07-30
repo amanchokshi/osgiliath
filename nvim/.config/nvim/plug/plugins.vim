@@ -37,10 +37,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Markdown preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-    " rST syntax and preview
-    Plug 'Rykka/riv.vim'
-    Plug 'Rykka/InstantRst'
-
     " Hex color highlighting
     " Requires golang installed and other fancy stuff
     " https://github.com/RRethy/vim-hexokinase
