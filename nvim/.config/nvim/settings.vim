@@ -33,8 +33,9 @@ set ttyfast                             " Faster rendering
 set encoding=utf8                       " Encoding set to utf8
 set nocompatible                        " No backward compatibility with Vi
 set colorcolumn=160                     " Highlight line 160 - flake8 setting
+set spelllang=en                        " English language for spell check
 
-" Color colum settings
+"Color colum settings
 highlight ColorColumn ctermbg=0 guibg=#3c3836
 
 " Removes end of buffer ~ signs
