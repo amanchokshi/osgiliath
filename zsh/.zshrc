@@ -181,13 +181,6 @@ SPACESHIP_EXEC_TIME_COLOR=yellow
 SPACESHIP_EXEC_TIME_ELAPSED=60
 
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -267,11 +260,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # sshfs mount
 alias ozstar_sshfs="sshfs -o default_permissions -o volname=Ozstar ozstar:/fred/oz048/achokshi ~/Ozstar/"
+alias garrawarla_sshfs="sshfs -o default_permissions -o volname=Garrawarla garrawarla:/astro/mwaeor/achokshi ~/Garrawarla/"
 alias ucalegon_sshfs="sshfs -o default_permissions -o volname=Ucalegon ucalegon:/media/achokshi/satellites/ ~/Ucalegon/"
-
-# ds9
-alias ds9="open /Applications/SAOImageDS9.app"
-alias fv="open /Applications/FV.app"
 
 # bat theme
 export BAT_THEME="gruvbox"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH=$PATH:/Applications/FV.app/Contents/Resources/fv5.5.2
+export PATH=$PATH:/Applications/SAOImageDS9.app/Contents/MacOS
