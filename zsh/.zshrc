@@ -143,7 +143,7 @@ SPACESHIP_USER_COLOR_ROOT=green
 
 # Directory stuff
 SPACESHIP_DIR_PREFIX="» "
-SPACESHIP_DIR_TRUNC=1
+SPACESHIP_DIR_TRUNC=3
 SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_DIR_COLOR=202
 
@@ -191,9 +191,9 @@ SPACESHIP_EXEC_TIME_ELAPSED=60
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # TMUX brew stuff
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+# export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+# export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
 # Pyenv brew stuff
 export LDFLAGS="-L/usr/local/opt/readline/lib"
@@ -205,8 +205,8 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 
 # Disable pyenv virtuelenv prompt
@@ -226,12 +226,15 @@ alias ip=ipython
 # gotop
 alias gtop=gotop
 
+alias gs="git status"
+
 # Pyenv is the master of python paths
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
 
 # Vim with virtual envs
 # https://vi.stackexchange.com/questions/7644/use-vim-with-virtualenv/7654#7654
@@ -260,12 +263,23 @@ export NVM_DIR="$HOME/.nvm"
 
 # sshfs mount
 alias ozstar_sshfs="sshfs -o default_permissions -o volname=Ozstar ozstar:/fred/oz048/achokshi ~/Ozstar/"
-alias garrawarla_sshfs="sshfs -o default_permissions -o volname=Garrawarla garrawarla:/astro/mwaeor/achokshi ~/Garrawarla/"
+alias gar_sshfs="sshfs -o default_permissions -o volname=Garrawarla gar:/astro/mwaeor/achokshi ~/Garrawarla/"
 alias ucalegon_sshfs="sshfs -o default_permissions -o volname=Ucalegon ucalegon:/media/achokshi/satellites/ ~/Ucalegon/"
+alias spirit_sshfs="sshfs -o default_permissions -o volname=Spirit spirit:/home/spirit/msp_camera_sw ~/Spirit/"
 
 # bat theme
 export BAT_THEME="gruvbox"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH=$PATH:/Applications/FV.app/Contents/Resources/fv5.5.2
-export PATH=$PATH:/Applications/SAOImageDS9.app/Contents/MacOS
+# export PATH=$PATH:/Applications/SAOImageDS9.app/Contents/MacOS
+alias ds9="open /Applications/SAOImageDS9.app"
+
+# TeX Live
+export MANPATH="$MANPATH:/usr/local/bin/textlive/2020/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/usr/local/bin/textlive/2020/texmf-dist/doc/info"
+export PATH="$PATH:/usr/local/bin/textlive/2020/bin/x86_64-darwin"
+
+# MWA Hyperbeam
+export MWA_BEAM_FILE=/users/amanchokshi/Repos/hyperbeam/mwa_full_embedded_element_pattern.h5
+export PATH="/Users/amanchokshi/.pyenv/shims:${PATH}"
