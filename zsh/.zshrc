@@ -283,3 +283,6 @@ export PATH="$PATH:/usr/local/bin/textlive/2020/bin/x86_64-darwin"
 # MWA Hyperbeam
 export MWA_BEAM_FILE=/users/amanchokshi/Repos/hyperbeam/mwa_full_embedded_element_pattern.h5
 export PATH="/Users/amanchokshi/.pyenv/shims:${PATH}"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
