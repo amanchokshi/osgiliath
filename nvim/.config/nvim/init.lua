@@ -9,6 +9,7 @@
 require 'plugins'
 require 'keybindings'
 require 'whichkey-config'
+require 'nvim-cmp-config'
 require 'nvim-tree-config'
 require 'autopairs-config'
 require 'telescope-config'
@@ -89,6 +90,12 @@ vim.cmd([[colorscheme gruvbox]])
 vim.cmd([[highlight SignColumn guibg=282828AF]])
 vim.cmd([[highlight EndOfBuffer guifg=#303030]])
 vim.cmd([[highligh WhichKeyFloat guibg=#303030]])
+vim.cmd([[highligh NvimTreeFolderName guifg=#458588]])
+vim.cmd([[highligh NvimTreeOpenedFolderName guifg=#d79921]])
+vim.cmd([[highligh NvimTreeOpenedFileName guifg=#d79921]])
+vim.cmd([[highligh NvimTreeRootFolder guifg=#DA3752]])
+
+
 -- }}}
 
 -- Custom Commands {{{

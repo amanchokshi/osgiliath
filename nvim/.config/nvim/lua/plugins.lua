@@ -5,11 +5,25 @@ if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
-require ('packer').init(
-{
-    git = {clone_timeout = 360}
-}
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+-- Have packer use a popup window
+packer.init({
+    display = {
+      open_fn = function()
+        return require('packer.util').float({ border = 'single' })
+      end
+    }
+  }
 )
+
+-- Longer timeout for git clones 
+require ('packer').init({git = {clone_timeout = 360}})
+
 -- }}}
 
 return require('packer').startup(function(use)
@@ -38,7 +52,7 @@ return require('packer').startup(function(use)
           lualine_c = {'filename'},
           lualine_x = {'filetype'},
           lualine_y = {'progress'},
-          lualine_z = {'location'}
+          lualine_z = {'location'},
         }
       }
   end
@@ -71,6 +85,16 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- Nvim Cmp
+  use {'neovim/nvim-lspconfig'}
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-cmdline'}
+  use {'hrsh7th/nvim-cmp'}
+  use {'hrsh7th/cmp-vsnip'}
+  use {'hrsh7th/vim-vsnip'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
