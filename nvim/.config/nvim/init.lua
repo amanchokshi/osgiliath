@@ -9,7 +9,7 @@
 require 'plugins'
 require 'keybindings'
 require 'whichkey-config'
-require 'nvim-cmp-config'
+require 'lsp'
 require 'nvim-tree-config'
 require 'autopairs-config'
 require 'telescope-config'
