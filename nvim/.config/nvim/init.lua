@@ -14,6 +14,7 @@ require 'nvim-tree-config'
 require 'autopairs-config'
 require 'telescope-config'
 require 'treesitter-config'
+require 'dashboard-config'
 
 -- Basic Setting {{{
 -- Essentials {{{
