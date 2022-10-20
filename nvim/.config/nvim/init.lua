@@ -15,6 +15,7 @@ require 'autopairs-config'
 require 'telescope-config'
 require 'treesitter-config'
 require 'dashboard-config'
+require 'snippets'
 
 -- Basic Setting {{{
 -- Essentials {{{
