@@ -49,6 +49,9 @@ return packer.startup(function(use)
 	-- Autopairs
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 
+	-- Indentation
+	use({ "lukas-reineke/indent-blankline.nvim" })
+
 	-- Color Schemes
 	use("lunarvim/horizon.nvim")
 	use("ellisonleao/gruvbox.nvim")
@@ -56,7 +59,7 @@ return packer.startup(function(use)
 	-- Lightline
 	use("nvim-lualine/lualine.nvim")
 
-	-- cmp plugins
+	-- Cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
 	use("hrsh7th/cmp-path") -- path completions
@@ -70,11 +73,12 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 	-- LSP
+	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
-	use("neovim/nvim-lspconfig") -- enable LSP
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	use({ "RRethy/vim-illuminate" })
 
 	-- Formatting & Linting
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
