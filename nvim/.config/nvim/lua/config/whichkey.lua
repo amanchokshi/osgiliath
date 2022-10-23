@@ -79,13 +79,14 @@ local opts = {
 }
 
 local mappings = {
-	["/"] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<CR>', "Comment" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = { ":Telescope find_files<cr>", "Find File" },
 	["F"] = { ":Telescope live_grep<cr>", "Find Text" },
 	["r"] = { ":Telescope oldfiles<cr>", "Recent Files" },
 	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 	["t"] = { ":NvimTreeToggle<cr>", "Tree" },
+	["q"] = { "<cmd>q!<CR>", "Quit" },
+	["w"] = { "<cmd>w!<CR>", "Save" },
 
 	p = {
 		name = "Packer",
@@ -130,7 +131,7 @@ local mappings = {
 			"<cmd>Telescope lsp_workspace_diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
-		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+		f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {
@@ -171,18 +172,5 @@ local mappings = {
 	},
 }
 
-local vopts = {
-	mode = "v", -- VISUAL mode
-	prefix = "<leader>",
-	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-	silent = true, -- use `silent` when creating keymaps
-	noremap = true, -- use `noremap` when creating keymaps
-	nowait = true, -- use `nowait` when creating keymaps
-}
-local vmappings = {
-	["/"] = { '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', "Comment" },
-}
-
 which_key.setup(setup)
 which_key.register(mappings, opts)
-which_key.register(vmappings, vopts)
