@@ -78,7 +78,8 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
-	use({ "RRethy/vim-illuminate" })
+	use({ "RRethy/vim-illuminate" }) -- highlighting other uses of the word under the cursor
+    use 'j-hui/fidget.nvim' -- nvim-lsp progress
 
 	-- Formatting & Linting
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters

@@ -11,6 +11,7 @@ saga.init_lsp_saga({
 	finder_action_keys = {
 		open = "<CR>",
 	},
+    code_action_icon = "✧",
 	-- use enter to open file with definition preview
 	definition_action_keys = {
 		edit = "<CR>",
