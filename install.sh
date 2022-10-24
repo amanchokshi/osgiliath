@@ -3,8 +3,8 @@
 echo "Stowing .zshrc to '$HOME'"
 stow -v -R -t ~ zsh
 
-echo "Stowing neovim config to '$HOME'"
-stow -v -R -t ~ nvim
+# echo "Stowing neovim config to '$HOME'"
+# stow -v -R -t ~ nvim
 
 echo "Stowing alacritty config to '$HOME'"
 stow -v -R -t ~ alacritty
