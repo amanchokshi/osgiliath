@@ -14,7 +14,7 @@ vim.o.updatetime = 300 -- Faster completion
 vim.o.timeoutlen = 700 -- By default timeoutlen is 1000 ms
 vim.o.shortmess = vim.o.shortmess .. "c" -- Ignore all "Enter to continue at bottom of screen"
 vim.o.compatible = false -- No backward compatibility with Vi
-vim.o.spelllang = "en_gb" -- English language for spell check
+vim.o.spelllang = "en_us" -- English language for spell check
 vim.o.encoding = "utf-8" -- Encoding type
 vim.o.autoread = true -- Automatically re-read changed files
 vim.o.syntax = "on" -- Enable syntax highlighting
@@ -68,6 +68,7 @@ vim.o.suffixes = ".bak,.o,.info,.swp,.obj"
 
 -- }}}
 -- }}}
+
 -- Custom Commands {{{
 
 -- Remove trailing whitespace

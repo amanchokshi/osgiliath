@@ -27,11 +27,13 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- }}}
+
 -- Insert {{{
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 -- }}}
+
 -- Visual {{{
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -42,6 +44,7 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 -- }}}
+
 -- Visual Block {{{
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -49,6 +52,7 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- }}}
+
 -- Terminal {{{
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
@@ -56,14 +60,6 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- }}}
--- Telescope {{{
-keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>r", "<cmd>Telescope oldfiles<cr>", opts)
-keymap("n", "<leader>p", "<cmd>Telescope projects<cr>", opts)
--- }}}
--- Nvimtree {{{
-keymap("n", "<leader>t", ":NvimTreeToggle<cr>", opts)
--- }}}
+
 -- Enable folding
 -- vim: set foldmethod=marker:
