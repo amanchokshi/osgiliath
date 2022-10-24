@@ -81,14 +81,12 @@ local opts = {
 local mappings = {
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = { ":Telescope find_files<cr>", "Find File" },
-	["F"] = { ":Telescope live_grep<cr>", "Find Text" },
+	["g"] = { ":Telescope live_grep<cr>", "Grep Text" },
 	["r"] = { ":Telescope oldfiles<cr>", "Recent Files" },
-	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
+	["p"] = { "<cmd>Telescope projects<cr>", "Projects" },
 	["t"] = { ":NvimTreeToggle<cr>", "Tree" },
-	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["w"] = { "<cmd>w!<CR>", "Save" },
 
-	p = {
+	P = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
 		i = { "<cmd>PackerInstall<cr>", "Install" },
@@ -97,7 +95,7 @@ local mappings = {
 		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
 
-	g = {
+	G = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
@@ -160,8 +158,7 @@ local mappings = {
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 	},
 
-    -- `:help spell`
-	W = {
+	w = {
 		name = "Spell Check",
 		s = { "<cmd>set spell<cr>", "Enable Spell Check" },
 		S = { "<cmd>set nospell<cr>", "Disable Spell Check" },
