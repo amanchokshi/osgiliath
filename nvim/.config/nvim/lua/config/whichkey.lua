@@ -150,7 +150,7 @@ local mappings = {
 	},
 	s = {
 		name = "Search",
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+		b = { "<cmd>Telescope git_branches<cr>", "Checkout Branch" },
 		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
@@ -158,6 +158,13 @@ local mappings = {
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
+	},
+
+    -- `:help spell`
+	W = {
+		name = "Spell Check",
+		s = { "<cmd>set spell<cr>", "Enable Spell Check" },
+		S = { "<cmd>set nospell<cr>", "Disable Spell Check" },
 	},
 
 	T = {
